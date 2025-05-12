@@ -38,7 +38,7 @@ APPETIZE_API_BASE_URL="https://api.appetize.io/v1/apps"
 APPETIZE_EMBED_URL="https://appetize.io/embed"
 
 # Default device for the embed URL (can be adjusted)
-APPETIZE_DEFAULT_DEVICE="pixel4" # e.g., nexus5x, pixel4, ipad-pro
+APPETIZE_DEFAULT_DEVICE="pixel7" # e.g., nexus5x, pixel4, ipad-pro
 
 # Whether to autoplay the session in the embed URL
 APPETIZE_AUTOPLAY="true" # true or false
