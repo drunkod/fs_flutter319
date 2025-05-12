@@ -179,8 +179,6 @@ in
         default.openFiles = [
           ".idx/dev.nix"
           "README.md"
-          "pubspec.yaml"
-          "lib/main.dart"
         ];
       };
       # Runs when the workspace is (re)started

@@ -25,7 +25,7 @@
           # Or if flutter319 has specific minimums. These should generally be okay.
           toolsVersion = "26.1.1"; # This is quite old; newer might be available/better
           platformToolsVersion = "34.0.5";
-          buildToolsVersions = [ "33.0.1" ];
+          buildToolsVersions = [ "33.0.1" "30.0.3"];
           includeEmulator = false;
           emulatorVersion = "34.1.9"; # Latest available on unstable at time of writing, may be older on 24.11
           platformVersions = [
@@ -53,7 +53,7 @@
           cmakeVersions = [ "3.10.2" ]; # This is very old for CMake; Flutter may prefer newer.
                                         # e.g., "3.22.1" is common. Test if "3.10.2" is sufficient for your NDK needs.
           includeNDK = true;
-          ndkVersions = [ "22.0.7026061" ]; # NDK r22. Flutter 3.19 might work fine, but newer NDKs (e.g., r25, r26) are also common.
+          ndkVersions = [ "22.0.7026061" "25.1.8937393"]; # NDK r22. Flutter 3.19 might work fine, but newer NDKs (e.g., r25, r26) are also common.
                                              # Test if this version causes issues.
           useGoogleAPIs = false;
           useGoogleTVAddOns = false;
@@ -64,11 +64,15 @@
         devShell =
           with pkgs;
           mkShell {
+            GRADLE_USER_HOME = "/home/user/.emu/.gradle";
+            PUB_CACHE = "/home/user/.emu/.pub-cache";
+
             ANDROID_SDK_ROOT = "${androidSdk}/libexec/android-sdk";
             ANDROID_HOME = "${androidSdk}/libexec/android-sdk";
             # JAVA_HOME = pkgs.jdk17; # Ensure Flutter 3.19 is compatible with JDK 17. It generally is.
             # CHROME_EXECUTABLE = "${pkgs.ungoogled-chromium}/bin/chromium";
             buildInputs = [
+              gcc
               # flutter319 # Changed
               # firebase-tools
               # python3 # web serve locally 'python -m http.server'
