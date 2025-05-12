@@ -23,26 +23,14 @@
         androidComposition = pkgs.androidenv.composeAndroidPackages {
           # Consider if tools/platform-tools/emulator versions are still appropriate for nixos-24.11
           # Or if flutter319 has specific minimums. These should generally be okay.
-          toolsVersion = "26.1.1"; # This is quite old; newer might be available/better
+          # toolsVersion = "26.1.1"; # This is quite old; newer might be available/better
+          cmdLineToolsVersion = "8.0"; # emulator related: newer versions are not only compatible with avdmanager
+          
           platformToolsVersion = "34.0.5";
-          buildToolsVersions = [ "33.0.1" "30.0.3"];
+          buildToolsVersions = [ "30.0.3" "33.0.2" "34.0.0" ];
           includeEmulator = false;
-          emulatorVersion = "34.1.9"; # Latest available on unstable at time of writing, may be older on 24.11
-          platformVersions = [
-            "28"
-            "29"
-            "30"
-            "31"
-            "32"
-            "33"
-            "34"
-            # "35" # Android SDK Platform 35 might not be available in nixos-24.11's default android_sdk manifest
-                  # If you encounter issues, try removing this or specifying an exact version with sha256.
-                  # For now, I'm keeping it as per your original config but commenting as a potential point of failure.
-                  # If you need it, uncomment and test. If it fails to build, you'll need to investigate further.
-                  # It's safer to stick to platforms readily available/tested with nixos-24.11.
-                  # I will include 34 which is typically more stable.
-          ];
+          # emulatorVersion = "34.1.9"; # Latest available on unstable at time of writing, may be older on 24.11
+          platformVersions = [ "28" "31" "32" "33" "34" ];          
           includeSources = false;
           includeSystemImages = false;
           systemImageTypes = [ "google_apis_playstore" ];
@@ -50,11 +38,10 @@
             "armeabi-v7a"
             "arm64-v8a"
           ];
-          cmakeVersions = [ "3.10.2" ]; # This is very old for CMake; Flutter may prefer newer.
+          cmakeVersions = [ "3.22.1" ]; # This is very old for CMake; Flutter may prefer newer.
                                         # e.g., "3.22.1" is common. Test if "3.10.2" is sufficient for your NDK needs.
           includeNDK = true;
-          ndkVersions = [ "22.0.7026061" "25.1.8937393"]; # NDK r22. Flutter 3.19 might work fine, but newer NDKs (e.g., r25, r26) are also common.
-                                             # Test if this version causes issues.
+          ndkVersions = [ "25.1.8937393"];  
           useGoogleAPIs = false;
           useGoogleTVAddOns = false;
         };

@@ -98,12 +98,13 @@ in
     pkgs.sqlite         # From your flake
     pkgs.unzip          # Often needed for various SDK tools or archives
     pkgs.which          # Useful for debugging PATH issues
-    # pkgs.jq             # For JSON manipulation, often handy
+    pkgs.jq             # For JSON manipulation, often handy
     # pkgs.chromium or pkgs.google-chrome-stable # For Flutter web testing, if needed
 
     # --- General Utilities from previous example (optional) ---
     # pkgs.curl
     # pkgs.wget
+    pkgs.openssh
   ];
   
 
@@ -140,7 +141,7 @@ in
       # "vscodevim.vim"
       "Dart-Code.flutter"      # Essential for Flutter development
       "Dart-Code.dart-code"    # Essential for Dart development
-      # "GitHub.copilot"
+      "GitHub.copilot"
       # "eamodio.gitlens"
       # "esbenp.prettier-vscode" # If you use Prettier for other files
     ];
