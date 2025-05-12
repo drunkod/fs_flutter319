@@ -1,0 +1,25 @@
+name: additions
+description: Additional things for Nanc-CMS and Nanc-Based apps
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+  flutter: ">=3.10.1"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  nanc: ^0.0.3
+  nui: ^0.0.2
+  nanc_icons: ^0.0.1
+  nanc_analytics: ^0.0.1
+  nanc_configuration: ^0.0.1
+  nanc_tools: ^0.0.2
+  url_launcher: ^6.1.11
+  share_plus: ^7.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  nanc_lints: ^1.0.0

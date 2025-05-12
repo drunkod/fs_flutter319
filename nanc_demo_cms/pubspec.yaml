@@ -1,0 +1,24 @@
+name: nanc_demo_cms
+description: Demo Nanc CMS
+publish_to: 'none'
+version: 0.0.1
+
+environment:
+  sdk: '>=3.0.1 <4.0.0'
+  flutter: ">=3.10.1"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  nanc: ^0.0.3
+  nanc_api_supabase: ^1.0.0
+  nanc_api_firebase: ^1.0.0
+  nanc_configuration: ^0.0.1
+  nanc_icons: ^0.0.1
+  firebase_core: any
+
+dev_dependencies:
+  nanc_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,54 @@
+name: introduction_cms
+description: Introduction CMS
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0-42.0.dev <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  nanc: ^0.0.3
+  nanc_configuration: ^0.0.1
+  nanc_api_local: ^1.0.1
+  nanc_api_firebase: ^1.0.0
+  nanc_api_supabase: ^1.0.0
+  additions:
+    path: ../additions
+  nanc_tools: ^0.0.2
+  nanc_icons: ^0.0.1
+  nui_svg_renderer: ^1.0.0
+  nanc_fonts: ^0.0.1
+  nui: ^0.0.2
+  ionicons: ^0.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  nanc_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/fonts/
+  fonts:
+    - family: Blazeface
+      fonts:
+        - asset: assets/fonts/blazeface.ttf
+    - family: Helvetica
+      fonts:
+        - asset: assets/fonts/helvetica.ttf
+          weight: 400
+        - asset: assets/fonts/helvetica_light.ttf
+          weight: 300
+        - asset: assets/fonts/helvetica_bold.ttf
+          weight: 500
+    - family: Helvetica Neue
+      fonts:
+        - asset: assets/fonts/helvetica_neue_wide.ttf
+          weight: 400
+        - asset: assets/fonts/helvetica_neue_light.ttf
+          weight: 300
