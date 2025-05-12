@@ -128,7 +128,7 @@ in
 
     # --- For SQLite (if its libraries are needed by runtime linked tools) ---
     LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [ pkgs.sqlite ]; # Ensures .so files from sqlite are findable
-
+    PUB_CACHE = "/home/user/.emu/.pub-cache";
     # --- Other useful variables ---
     # EXAMPLE_VAR = "Hello from Nix!";
     # NODE_ENV = "development";
