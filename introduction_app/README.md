@@ -2,6 +2,9 @@
 
 Introduction App, built on top of Nanc Backend Driven UI
 
+## Fix tree-shake ic0ns
+`flutter build apk --no-tree-shake-icons`
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
