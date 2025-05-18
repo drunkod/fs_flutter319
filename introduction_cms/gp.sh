@@ -17,12 +17,11 @@ flutter pub get
   
 # Step 3: Build web version  
 echo "Building web version..."  
-flutter build web \  
-  --no-pub \  
-  --web-renderer canvaskit \  
-  --dart2js-optimization=O2 \  
-  --no-tree-shake-icons  
-#  --base-href /docs/ 
+flutter build web --no-pub \
+  --web-renderer canvaskit \
+  --dart2js-optimization=O2 \
+  --no-tree-shake-icons \
+  --base-href /fs_flutter319/
   
 # Step 4: Prepare for GitHub Pages  
 echo "Preparing for GitHub Pages deployment..."  
