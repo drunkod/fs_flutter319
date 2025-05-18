@@ -19,6 +19,6 @@ dependencies:
 
 dev_dependencies:
   nanc_lints: ^1.0.0
-
+  build_runner: ^2.4.4
 flutter:
   uses-material-design: true
